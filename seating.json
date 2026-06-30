@@ -1,7 +1,7 @@
 {
   "version": 4,
   "cell": 80,
-  "updatedAt": 1782776042840,
+  "updatedAt": 1782789408824,
   "zones": [
     {
       "id": "g-summit",
@@ -1205,18 +1205,5 @@
       "people": []
     }
   ],
-  "unassigned": [
-    {
-      "id": "p60",
-      "name": "Walter M."
-    },
-    {
-      "id": "p49",
-      "name": "temp"
-    },
-    {
-      "id": "p64",
-      "name": "Ashley"
-    }
-  ]
+  "unassigned": []
 }

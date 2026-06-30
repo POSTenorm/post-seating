@@ -126,7 +126,6 @@
   @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(201,138,57,.55)}50%{box-shadow:0 0 0 6px rgba(201,138,57,0)}}
 
   .grid.grow .tile{overflow:visible}
-  .pathband{position:absolute;border-radius:9px;background:rgba(120,150,115,.30);pointer-events:none;z-index:2}
   .pathnum{width:60px;font-family:var(--font);font-size:.9rem;border:1px solid var(--line);border-radius:8px;padding:7px 9px;outline:none}
   .pathnum:focus{border-color:var(--green-400)}
   .tile.dropok{outline:2px solid var(--green-600);outline-offset:1px}
@@ -293,11 +292,11 @@
             <span id="pathRangeLabel" style="font-size:.78rem;color:var(--ink-soft)">spanning rows</span>
             <input id="pathFrom" class="pathnum" type="number" min="1" value="1">
             <span style="font-size:.78rem;color:var(--ink-soft)">to</span>
-            <input id="pathTo" class="pathnum" type="number" min="1" value="4">
+            <input id="pathTo" class="pathnum" type="number" min="1" value="3">
             <button class="btn" id="pathAdd" style="background:var(--green-700);color:#fff">Add path</button>
           </div>
           <div id="pathList" style="display:flex;flex-direction:column;gap:6px;width:100%;max-width:540px"></div>
-          <span class="hint" style="margin:0">A path is a soft band in the gap between desks. Example: Vertical, after column 3, rows 1 to 4 draws a path down the right side of column 3, only across rows 1 to 4. Path width applies to all of them.</span>
+          <span class="hint" style="margin:0">A path opens real space between the desks for just the section you choose, with no line or fill. Example: Vertical, after column 3, rows 1 to 3 widens the gap to the right of column 3 across just those 3 rows. Path width sets how much space.</span>
         </div>
         <div class="tray-row">
           <button class="btn" id="addAreaBtn" style="background:var(--green-700);color:#fff">+ Add area</button>
@@ -553,36 +552,23 @@
     if(!list.length){ box.innerHTML='<span class="hint" style="margin:0">No paths on this floor yet.</span>'; return; }
     list.forEach(function(p){
       var row=document.createElement("div"); row.style.cssText="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--ink-soft);background:var(--cream);border:1px solid var(--line);border-radius:8px;padding:5px 8px";
-      var label=(p.orient==="v")?("Vertical \u00b7 after col "+p.line+" \u00b7 rows "+p.from+"\u2013"+p.to):("Horizontal \u00b7 after row "+p.line+" \u00b7 cols "+p.from+"\u2013"+p.to);
+      var label=(p.orient==="v")?("Vertical · after col "+p.line+" · rows "+p.from+"–"+p.to):("Horizontal · after row "+p.line+" · cols "+p.from+"–"+p.to);
       var s=document.createElement("span"); s.textContent=label; s.style.flex="1"; row.appendChild(s);
       var x=document.createElement("button"); x.className="btn btn-line"; x.style.cssText="padding:3px 9px"; x.textContent="Remove"; x.addEventListener("click",function(){ removePath(aisleLevel,p.id); }); row.appendChild(x);
       box.appendChild(row);
     });
   }
-  function positionPaths(lv){
-    var g=$("grid-"+lv); if(!g || g.offsetWidth===0) return;
-    Array.prototype.slice.call(g.querySelectorAll(".pathband")).forEach(function(b){ b.parentNode.removeChild(b); });
-    var list=getPaths(lv); if(!list.length) return;
-    var cs=getComputedStyle(g);
-    var cols=cs.gridTemplateColumns.split(" ").map(parseFloat);
-    var rows=cs.gridTemplateRows.split(" ").map(parseFloat);
-    if(!cols.length || isNaN(cols[0])) return;
-    var cgap=parseFloat(cs.columnGap)||8, rgap=parseFloat(cs.rowGap)||8, asz=(state.aisleSize||22);
-    function colLeft(c){ var x=0; for(var i=1;i<c;i++){ x+=(cols[i-1]||0)+cgap; } return x; }
-    function colRight(c){ return colLeft(c)+(cols[c-1]||0); }
-    function rowTop(r){ var y=0; for(var i=1;i<r;i++){ y+=(rows[i-1]||0)+rgap; } return y; }
-    function rowBottom(r){ return rowTop(r)+(rows[r-1]||0); }
+  function pathMargins(z){
+    var m={l:0,r:0,t:0,b:0}, list=getPaths(z.level), half=(state.aisleSize||22)/2;
+    var c0=z.col, c1=z.col+(z.w||1)-1, r0=z.row, r1=z.row+(z.h||1)-1;
     list.forEach(function(p){
-      var b=document.createElement("div"); b.className="pathband";
       if(p.orient==="v"){
-        var cx=colRight(p.line)+cgap/2, top=rowTop(p.from), bottom=rowBottom(p.to);
-        b.style.left=(cx-asz/2)+"px"; b.style.width=asz+"px"; b.style.top=top+"px"; b.style.height=(bottom-top)+"px";
+        if(!(r1<p.from || r0>p.to)){ if(c1===p.line) m.r+=half; if(c0===p.line+1) m.l+=half; }
       } else {
-        var cy=rowBottom(p.line)+rgap/2, l=colLeft(p.from), r=colRight(p.to);
-        b.style.top=(cy-asz/2)+"px"; b.style.height=asz+"px"; b.style.left=l+"px"; b.style.width=(r-l)+"px";
+        if(!(c1<p.from || c0>p.to)){ if(r1===p.line) m.b+=half; if(r0===p.line+1) m.t+=half; }
       }
-      g.appendChild(b);
     });
+    return m;
   }
 
   // ---------- render ----------
@@ -613,6 +599,9 @@
     el.dataset.id=z.id;
     el.style.gridColumn=z.col+" / span "+(z.w||1);
     el.style.gridRow=z.row+" / span "+(z.h||1);
+    var pm=pathMargins(z);
+    el.style.marginLeft=pm.l?pm.l+"px":""; el.style.marginRight=pm.r?pm.r+"px":"";
+    el.style.marginTop=pm.t?pm.t+"px":""; el.style.marginBottom=pm.b?pm.b+"px":"";
     if(z.type==="desk"){
       var num=document.createElement("div"); num.className="num"; num.textContent=(/^\d+$/.test(z.name)?"#":"")+z.name; el.appendChild(num);
       var pe=document.createElement("div"); pe.className="people"; (z.people||[]).forEach(function(p){ pe.appendChild(chipEl(p,z.id)); }); el.appendChild(pe);
@@ -658,7 +647,6 @@
     g.style.gridAutoRows="";
     if(layout){ for(var r2=1;r2<=rowMax;r2++) for(var c2=1;c2<=cols;c2++) g.appendChild(slotEl(lv,c2,r2)); }
     levelZones(lv).forEach(function(z){ g.appendChild(tileEl(z)); });
-    requestAnimationFrame(function(){ positionPaths(lv); });
   }
 
   function renderUnassigned(){
@@ -725,7 +713,7 @@
   function pulsePerson(name){ var q=name.toLowerCase(); document.querySelectorAll(".chip").forEach(function(c){ if(c.querySelector("span").textContent.toLowerCase()===q){ c.classList.remove("hit"); void c.offsetWidth; c.classList.add("hit"); } }); }
 
   // ---------- view + mode ----------
-  function setView(v){ view=v; document.querySelectorAll(".seg [data-view]").forEach(function(b){ b.classList.toggle("on",b.dataset.view===v); }); $("level-ground").classList.toggle("hidden",v==="mezz"); $("level-mezz").classList.toggle("hidden",v==="ground"); $("levels").classList.toggle("single",v!=="both"); requestAnimationFrame(function(){ positionPaths("ground"); positionPaths("mezz"); }); }
+  function setView(v){ view=v; document.querySelectorAll(".seg [data-view]").forEach(function(b){ b.classList.toggle("on",b.dataset.view===v); }); $("level-ground").classList.toggle("hidden",v==="mezz"); $("level-mezz").classList.toggle("hidden",v==="ground"); $("levels").classList.toggle("single",v!=="both"); }
   function setMode(m){
     adminMode=m;
     $("modePeople").classList.toggle("on",m==="people"); $("modeLayout").classList.toggle("on",m==="layout");
@@ -791,7 +779,6 @@
     $("pathDirV").addEventListener("click", function(){ newPathOrient="v"; renderPathList(); });
     $("pathDirH").addEventListener("click", function(){ newPathOrient="h"; renderPathList(); });
     $("pathAdd").addEventListener("click", addPath);
-    window.addEventListener("resize", function(){ clearTimeout(window.__pp); window.__pp=setTimeout(function(){ positionPaths("ground"); positionPaths("mezz"); },120); });
 
     // inspector
     $("inspClose").addEventListener("click", deselectTile);

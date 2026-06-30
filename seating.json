@@ -1,7 +1,7 @@
 {
   "version": 4,
-  "cell": 80,
-  "updatedAt": 1782792319686,
+  "cell": 88,
+  "updatedAt": 1782795478916,
   "zones": [
     {
       "id": "g-summit",
@@ -39,7 +39,7 @@
     {
       "id": "g-storage",
       "type": "other",
-      "name": "Storage",
+      "name": "Land Storage",
       "level": "ground",
       "col": 2,
       "row": 1,
@@ -890,7 +890,7 @@
       "col": 10,
       "row": 1,
       "w": 1,
-      "h": 2,
+      "h": 3,
       "people": []
     },
     {
@@ -899,7 +899,7 @@
       "name": "Barn",
       "level": "ground",
       "col": 10,
-      "row": 3,
+      "row": 4,
       "w": 1,
       "h": 1,
       "people": []
@@ -910,9 +910,9 @@
       "name": "Lighthouse",
       "level": "ground",
       "col": 10,
-      "row": 4,
+      "row": 5,
       "w": 1,
-      "h": 2,
+      "h": 1,
       "people": []
     },
     {
@@ -1049,7 +1049,7 @@
       "level": "mezz",
       "col": 1,
       "row": 9,
-      "w": 1,
+      "w": 2,
       "h": 2,
       "people": []
     },
@@ -1179,7 +1179,7 @@
       "col": 3,
       "row": 9,
       "w": 1,
-      "h": 1,
+      "h": 2,
       "people": []
     },
     {
@@ -1200,6 +1200,17 @@
       "level": "mezz",
       "col": 1,
       "row": 4,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "zmr06bwcf",
+      "type": "other",
+      "name": "Marketing",
+      "level": "mezz",
+      "col": 1,
+      "row": 3,
       "w": 1,
       "h": 1,
       "people": []
@@ -1224,5 +1235,9 @@
       "y": []
     }
   },
-  "aisleSize": 22
+  "aisleSize": 22,
+  "paths": {
+    "ground": [],
+    "mezz": []
+  }
 }

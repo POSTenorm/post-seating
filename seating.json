@@ -1,7 +1,7 @@
 {
   "version": 4,
-  "cell": 88,
-  "updatedAt": 1782795478916,
+  "cell": 80,
+  "updatedAt": 1782796269886,
   "zones": [
     {
       "id": "g-summit",
@@ -1032,17 +1032,6 @@
       ]
     },
     {
-      "id": "m-finance",
-      "type": "other",
-      "name": "Finance & Bulk Scanner",
-      "level": "mezz",
-      "col": 2,
-      "row": 3,
-      "w": 1,
-      "h": 1,
-      "people": []
-    },
-    {
       "id": "m-openwork",
       "type": "conference",
       "name": "Open Work Area",
@@ -1235,7 +1224,7 @@
       "y": []
     }
   },
-  "aisleSize": 22,
+  "aisleSize": 10,
   "paths": {
     "ground": [],
     "mezz": []

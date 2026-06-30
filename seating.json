@@ -1,7 +1,7 @@
 {
   "version": 4,
   "cell": 80,
-  "updatedAt": 1782790606054,
+  "updatedAt": 1782792319686,
   "zones": [
     {
       "id": "g-summit",
@@ -953,9 +953,9 @@
       "type": "other",
       "name": "Stairs",
       "level": "mezz",
-      "col": 1,
+      "col": 2,
       "row": 2,
-      "w": 3,
+      "w": 2,
       "h": 1,
       "people": []
     },
@@ -965,7 +965,7 @@
       "name": "66",
       "level": "mezz",
       "col": 1,
-      "row": 4,
+      "row": 5,
       "w": 1,
       "h": 1,
       "people": [
@@ -981,7 +981,7 @@
       "name": "67",
       "level": "mezz",
       "col": 1,
-      "row": 5,
+      "row": 6,
       "w": 1,
       "h": 1,
       "people": [
@@ -997,7 +997,7 @@
       "name": "68",
       "level": "mezz",
       "col": 1,
-      "row": 6,
+      "row": 7,
       "w": 1,
       "h": 1,
       "people": [
@@ -1013,7 +1013,7 @@
       "name": "69",
       "level": "mezz",
       "col": 1,
-      "row": 7,
+      "row": 8,
       "w": 1,
       "h": 1,
       "people": [
@@ -1048,8 +1048,8 @@
       "name": "Open Work Area",
       "level": "mezz",
       "col": 1,
-      "row": 8,
-      "w": 2,
+      "row": 9,
+      "w": 1,
       "h": 2,
       "people": []
     },
@@ -1199,12 +1199,30 @@
       "name": "Water",
       "level": "mezz",
       "col": 1,
-      "row": 3,
+      "row": 4,
       "w": 1,
       "h": 1,
       "people": []
     }
   ],
   "unassigned": [],
-  "fit": "grow"
+  "fit": "grow",
+  "aisles": {
+    "ground": {
+      "x": [
+        3,
+        5,
+        7,
+        9
+      ],
+      "y": [
+        9
+      ]
+    },
+    "mezz": {
+      "x": [],
+      "y": []
+    }
+  },
+  "aisleSize": 22
 }

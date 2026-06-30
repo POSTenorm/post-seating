@@ -1,7 +1,7 @@
 {
   "version": 4,
   "cell": 88,
-  "updatedAt": 1782797676424,
+  "updatedAt": 1782798052387,
   "zones": [
     {
       "id": "g-summit",
@@ -1273,7 +1273,7 @@
       ]
     }
   },
-  "aisleSize": 8,
+  "aisleSize": 20,
   "paths": {
     "ground": [],
     "mezz": []

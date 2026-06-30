@@ -126,8 +126,6 @@
   @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(201,138,57,.55)}50%{box-shadow:0 0 0 6px rgba(201,138,57,0)}}
 
   .grid.grow .tile{overflow:visible}
-  .pathnum{width:60px;font-family:var(--font);font-size:.9rem;border:1px solid var(--line);border-radius:8px;padding:7px 9px;outline:none}
-  .pathnum:focus{border-color:var(--green-400)}
   .tile.dropok{outline:2px solid var(--green-600);outline-offset:1px}
   .tile.movetarget{outline:2px dashed var(--green-600);outline-offset:1px;cursor:pointer}
   .tile.hitcell{box-shadow:0 0 0 2px var(--amber)}
@@ -274,29 +272,6 @@
             <button id="fitSquare">Keep square</button>
           </div>
           <span class="hint" style="margin:0">"Grow to fit" lets a desk get taller so every name shows; "Keep square" keeps all blocks identical and hides extra names.</span>
-        </div>
-        <div class="tray-row" style="align-items:flex-start;flex-direction:column;gap:10px">
-          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-            <span style="font-size:.82rem;color:var(--ink-soft);font-weight:700">Walking paths</span>
-            <div class="seg" style="box-shadow:none"><button id="aisleLvGround" class="on">Ground</button><button id="aisleLvMezz">Mezzanine</button></div>
-            <span style="font-size:.78rem;color:var(--ink-soft)">Path width</span>
-            <div class="stepper"><button id="aisleMinus">&minus;</button><span class="val" id="aisleVal">22px</span><button id="aislePlus">+</button></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-            <span style="font-size:.78rem;color:var(--ink-soft)">Direction</span>
-            <div class="seg" style="box-shadow:none"><button id="pathDirV" class="on">Vertical</button><button id="pathDirH">Horizontal</button></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-            <span id="pathLineLabel" style="font-size:.78rem;color:var(--ink-soft)">Vertical gap after column</span>
-            <input id="pathLine" class="pathnum" type="number" min="1" value="3">
-            <span id="pathRangeLabel" style="font-size:.78rem;color:var(--ink-soft)">spanning rows</span>
-            <input id="pathFrom" class="pathnum" type="number" min="1" value="1">
-            <span style="font-size:.78rem;color:var(--ink-soft)">to</span>
-            <input id="pathTo" class="pathnum" type="number" min="1" value="3">
-            <button class="btn" id="pathAdd" style="background:var(--green-700);color:#fff">Add path</button>
-          </div>
-          <div id="pathList" style="display:flex;flex-direction:column;gap:6px;width:100%;max-width:540px"></div>
-          <span class="hint" style="margin:0">A path opens real space between the desks for just the section you choose, with no line or fill. Example: Vertical, after column 3, rows 1 to 3 widens the gap to the right of column 3 across just those 3 rows. Path width sets how much space.</span>
         </div>
         <div class="tray-row">
           <button class="btn" id="addAreaBtn" style="background:var(--green-700);color:#fff">+ Add area</button>
@@ -459,7 +434,7 @@
     z.push(dk(63,"mezz",3,4,people("Ashley")));
     z.push(dk(64,"mezz",3,5,people("Xiaojing L.")));
     z.push(dk(65,"mezz",3,6,people("Bryanna W.")));
-    return { version:4, cell:96, fit:"grow", aisleSize:22, paths:{ground:[],mezz:[]}, updatedAt:Date.now(), zones:z, unassigned:[] };
+    return { version:4, cell:96, fit:"grow", updatedAt:Date.now(), zones:z, unassigned:[] };
   }
 
   // ---------- migration ----------
@@ -497,7 +472,7 @@
 
   // ---------- state / storage ----------
   var hasStore = (typeof window!=="undefined" && window.storage && typeof window.storage.get==="function");
-  var state=null, isAdmin=false, adminMode="people", view="both", selChip=null, selTile=null, lastSavedAt=0, saveTimer=null, staticHost=false, aisleLevel="ground", newPathOrient="v";
+  var state=null, isAdmin=false, adminMode="people", view="both", selChip=null, selTile=null, lastSavedAt=0, saveTimer=null, staticHost=false;
   function $(id){ return document.getElementById(id); }
 
   function showStoreBanner(){ var b=$("storeBanner"); if(!hasStore){ b.className="banner warn"; b.style.display="block"; b.textContent="Preview mode: shared saving isn't available here, so edits won't reach staff. Open the published link to enable live sharing."; } }
@@ -525,52 +500,6 @@
   function neededRows(lv){ var m=BASE_ROWS[lv]; levelZones(lv).forEach(function(z){ m=Math.max(m, z.row+(z.h||1)-1); }); return m; }
   function occupied(lv, exceptId){ var set={}; levelZones(lv).forEach(function(z){ if(z.id===exceptId) return; for(var c=z.col;c<z.col+(z.w||1);c++) for(var r=z.row;r<z.row+(z.h||1);r++) set[c+"_"+r]=z.id; }); return set; }
   function firstFreeCell(lv){ var occ=occupied(lv,null); var cols=neededCols(lv), rows=neededRows(lv)+1; for(var r=1;r<=rows;r++) for(var c=1;c<=cols;c++){ if(!occ[c+"_"+r]) return {col:c,row:r}; } return {col:1,row:rows+1}; }
-  function getPaths(lv){ if(!state.paths) state.paths={}; if(!state.paths[lv]) state.paths[lv]=[]; return state.paths[lv]; }
-  function setAisleSize(d){ state.aisleSize=Math.min(64, Math.max(8, (state.aisleSize||22)+d)); if($("aisleVal"))$("aisleVal").textContent=(state.aisleSize)+"px"; saveSoon(); renderAll(); }
-  function addPath(){
-    var lv=aisleLevel, cols=neededCols(lv), rows=neededRows(lv), o=newPathOrient;
-    var line=parseInt($("pathLine").value,10), from=parseInt($("pathFrom").value,10), to=parseInt($("pathTo").value,10);
-    if(isNaN(line)||isNaN(from)||isNaN(to)){ toast("Enter the gap line and the from/to range"); return; }
-    if(to<from){ var t=from; from=to; to=t; }
-    function cl(v,a,b){ return Math.max(a,Math.min(b,v)); }
-    if(o==="v"){ line=cl(line,1,Math.max(1,cols-1)); from=cl(from,1,rows); to=cl(to,1,rows); }
-    else { line=cl(line,1,Math.max(1,rows-1)); from=cl(from,1,cols); to=cl(to,1,cols); }
-    getPaths(lv).push({id:"path"+Date.now().toString(36), orient:o, line:line, from:from, to:to});
-    saveSoon(); renderAll();
-  }
-  function removePath(lv,id){ state.paths[lv]=getPaths(lv).filter(function(p){return p.id!==id;}); saveSoon(); renderAll(); }
-  function renderPathList(){
-    if($("aisleLvGround")) $("aisleLvGround").classList.toggle("on", aisleLevel==="ground");
-    if($("aisleLvMezz")) $("aisleLvMezz").classList.toggle("on", aisleLevel==="mezz");
-    if($("aisleVal")) $("aisleVal").textContent=(state.aisleSize||22)+"px";
-    if($("pathDirV")) $("pathDirV").classList.toggle("on", newPathOrient==="v");
-    if($("pathDirH")) $("pathDirH").classList.toggle("on", newPathOrient==="h");
-    if($("pathLineLabel")) $("pathLineLabel").textContent = newPathOrient==="v" ? "Vertical gap after column" : "Horizontal gap after row";
-    if($("pathRangeLabel")) $("pathRangeLabel").textContent = newPathOrient==="v" ? "spanning rows" : "spanning columns";
-    var box=$("pathList"); if(!box) return; box.innerHTML="";
-    var list=getPaths(aisleLevel);
-    if(!list.length){ box.innerHTML='<span class="hint" style="margin:0">No paths on this floor yet.</span>'; return; }
-    list.forEach(function(p){
-      var row=document.createElement("div"); row.style.cssText="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--ink-soft);background:var(--cream);border:1px solid var(--line);border-radius:8px;padding:5px 8px";
-      var label=(p.orient==="v")?("Vertical · after col "+p.line+" · rows "+p.from+"–"+p.to):("Horizontal · after row "+p.line+" · cols "+p.from+"–"+p.to);
-      var s=document.createElement("span"); s.textContent=label; s.style.flex="1"; row.appendChild(s);
-      var x=document.createElement("button"); x.className="btn btn-line"; x.style.cssText="padding:3px 9px"; x.textContent="Remove"; x.addEventListener("click",function(){ removePath(aisleLevel,p.id); }); row.appendChild(x);
-      box.appendChild(row);
-    });
-  }
-  function pathMargins(z){
-    var m={l:0,r:0,t:0,b:0}, list=getPaths(z.level), half=(state.aisleSize||22)/2;
-    var c0=z.col, c1=z.col+(z.w||1)-1, r0=z.row, r1=z.row+(z.h||1)-1;
-    list.forEach(function(p){
-      if(p.orient==="v"){
-        if(!(r1<p.from || r0>p.to)){ if(c1===p.line) m.r+=half; if(c0===p.line+1) m.l+=half; }
-      } else {
-        if(!(c1<p.from || c0>p.to)){ if(r1===p.line) m.b+=half; if(r0===p.line+1) m.t+=half; }
-      }
-    });
-    return m;
-  }
-
   // ---------- render ----------
   function renderUpdated(){ var d=new Date(state.updatedAt); $("updated").textContent="Updated "+d.toLocaleDateString(undefined,{month:"short",day:"numeric"})+" at "+d.toLocaleTimeString(undefined,{hour:"numeric",minute:"2-digit"}); }
 
@@ -599,9 +528,6 @@
     el.dataset.id=z.id;
     el.style.gridColumn=z.col+" / span "+(z.w||1);
     el.style.gridRow=z.row+" / span "+(z.h||1);
-    var pm=pathMargins(z);
-    el.style.marginLeft=pm.l?pm.l+"px":""; el.style.marginRight=pm.r?pm.r+"px":"";
-    el.style.marginTop=pm.t?pm.t+"px":""; el.style.marginBottom=pm.b?pm.b+"px":"";
     if(z.type==="desk"){
       var num=document.createElement("div"); num.className="num"; num.textContent=(/^\d+$/.test(z.name)?"#":"")+z.name; el.appendChild(num);
       var pe=document.createElement("div"); pe.className="people"; (z.people||[]).forEach(function(p){ pe.appendChild(chipEl(p,z.id)); }); el.appendChild(pe);
@@ -640,12 +566,10 @@
   function renderGrid(lv){
     var g=$("grid-"+lv); g.innerHTML="";
     var cols=neededCols(lv), rows=neededRows(lv), cell=(state.cell||96), fit=(state.fit||"grow");
-    var layout=(isAdmin && adminMode==="layout"), rowMax=rows+(layout?1:0);
     g.classList.toggle("grow", fit==="grow");
     g.style.gridTemplateColumns="repeat("+cols+", "+cell+"px)";
-    g.style.gridTemplateRows="repeat("+rowMax+", "+((fit==="grow")?("minmax("+cell+"px, auto)"):(cell+"px"))+")";
-    g.style.gridAutoRows="";
-    if(layout){ for(var r2=1;r2<=rowMax;r2++) for(var c2=1;c2<=cols;c2++) g.appendChild(slotEl(lv,c2,r2)); }
+    g.style.gridAutoRows = (fit==="grow") ? ("minmax("+cell+"px, auto)") : (cell+"px");
+    if(isAdmin && adminMode==="layout"){ for(var r=1;r<=rows+1;r++) for(var c=1;c<=cols;c++) g.appendChild(slotEl(lv,c,r)); }
     levelZones(lv).forEach(function(z){ g.appendChild(tileEl(z)); });
   }
 
@@ -663,7 +587,7 @@
     }
   }
 
-  function renderAll(){ renderGrid("ground"); renderGrid("mezz"); renderUnassigned(); renderUpdated(); applySearch($("search").value); if(isAdmin && adminMode==="layout") renderPathList(); }
+  function renderAll(){ renderGrid("ground"); renderGrid("mezz"); renderUnassigned(); renderUpdated(); applySearch($("search").value); }
 
   // ---------- people moves ----------
   function movePersonTo(personId, deskId){ var t=zoneById(deskId); if(!t||t.type!=="desk") return; var p=removePerson(personId); if(!p) return; t.people.push(p); clearSelection(); saveState(p.name+" \u2192 "+(/^\d+$/.test(t.name)?"desk #":"")+t.name); renderAll(); }
@@ -772,13 +696,6 @@
     $("cellPlus").addEventListener("click", function(){ setCell(8); });
     $("fitGrow").addEventListener("click", function(){ setFit("grow"); });
     $("fitSquare").addEventListener("click", function(){ setFit("square"); });
-    $("aisleLvGround").addEventListener("click", function(){ aisleLevel="ground"; renderPathList(); });
-    $("aisleLvMezz").addEventListener("click", function(){ aisleLevel="mezz"; renderPathList(); });
-    $("aisleMinus").addEventListener("click", function(){ setAisleSize(-4); });
-    $("aislePlus").addEventListener("click", function(){ setAisleSize(4); });
-    $("pathDirV").addEventListener("click", function(){ newPathOrient="v"; renderPathList(); });
-    $("pathDirH").addEventListener("click", function(){ newPathOrient="h"; renderPathList(); });
-    $("pathAdd").addEventListener("click", addPath);
 
     // inspector
     $("inspClose").addEventListener("click", deselectTile);

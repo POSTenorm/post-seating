@@ -1,7 +1,7 @@
 {
   "version": 4,
   "cell": 88,
-  "updatedAt": 1782798157154,
+  "updatedAt": 1782798364758,
   "zones": [
     {
       "id": "g-summit",
@@ -1244,6 +1244,17 @@
       "level": "ground",
       "col": 3,
       "row": 9,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "zmr083wke",
+      "type": "other",
+      "name": "Cleaning Supplies",
+      "level": "ground",
+      "col": 9,
+      "row": 10,
       "w": 1,
       "h": 1,
       "people": []

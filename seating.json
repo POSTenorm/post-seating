@@ -1,7 +1,7 @@
 {
   "version": 4,
   "cell": 88,
-  "updatedAt": 1782798052387,
+  "updatedAt": 1782798157154,
   "zones": [
     {
       "id": "g-summit",
@@ -1162,7 +1162,7 @@
     },
     {
       "id": "zmqzsgflo",
-      "type": "other",
+      "type": "conference",
       "name": "Phone Booth",
       "level": "mezz",
       "col": 3,

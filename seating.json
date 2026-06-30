@@ -1,7 +1,7 @@
 {
   "version": 4,
   "cell": 80,
-  "updatedAt": 1782796269886,
+  "updatedAt": 1782796705486,
   "zones": [
     {
       "id": "g-summit",
@@ -1203,6 +1203,17 @@
       "w": 1,
       "h": 1,
       "people": []
+    },
+    {
+      "id": "zmr071meg",
+      "type": "other",
+      "name": "Finance & Bulk Scanner",
+      "level": "mezz",
+      "col": 2,
+      "row": 3,
+      "w": 1,
+      "h": 1,
+      "people": []
     }
   ],
   "unassigned": [],
@@ -1220,11 +1231,15 @@
       ]
     },
     "mezz": {
-      "x": [],
-      "y": []
+      "x": [
+        1
+      ],
+      "y": [
+        3
+      ]
     }
   },
-  "aisleSize": 10,
+  "aisleSize": 8,
   "paths": {
     "ground": [],
     "mezz": []

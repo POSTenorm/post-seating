@@ -171,6 +171,8 @@
   .btn-danger:hover{background:#fbeeea}
 
   footer.foot{margin-top:26px;font-size:.76rem;color:var(--ink-soft);text-align:center}
+  footer.foot .adminlink{color:var(--ink-soft);text-decoration:underline;text-underline-offset:2px;cursor:pointer;opacity:.7}
+  footer.foot .adminlink:hover{opacity:1;color:var(--green-700)}
 
   .modal-bg{position:fixed;inset:0;background:rgba(20,30,22,.42);display:none;align-items:center;justify-content:center;z-index:70;padding:18px}
   .modal-bg.show{display:flex}
@@ -206,8 +208,6 @@
             <input id="search" type="text" placeholder="Find a person" autocomplete="off" aria-label="Find a person">
             <button class="clr" id="searchClear" aria-label="Clear search">&times;</button>
           </div>
-          <button class="btn btn-ghost" id="printBtn" title="Print this map">Print</button>
-          <button class="btn btn-amber" id="adminBtn">Admin</button>
         </div>
       </div>
     </div>
@@ -282,7 +282,7 @@
       </section>
     </div>
 
-    <footer class="foot">Peninsula Open Space Trust &middot; Staff Seating Map. Questions or a desk that looks off? Contact Operations.</footer>
+    <footer class="foot">Peninsula Open Space Trust &middot; Staff Seating Map. Questions or a desk that looks off? Contact Operations. &middot; <a id="adminLink" class="adminlink">Staff editing</a></footer>
   </div>
 
   <div class="movebar" id="movebar"><span>Moving <b id="moveName"></b> &mdash; tap a desk to place</span><button class="btn btn-line" id="moveCancel" style="padding:6px 12px">Cancel</button></div>
@@ -641,7 +641,7 @@
   function setAdmin(on){
     isAdmin=on; var app=document.getElementById("post-app");
     app.classList.toggle("admin",on); $("tray").classList.toggle("show",on);
-    $("adminBtn").textContent=on?"Done editing":"Admin";
+    $("adminLink").textContent=on?"Exit editing":"Staff editing";
     $("publishNote").style.display=(on && staticHost)?"block":"none";
     if(on){ setMode("people"); } else { app.classList.remove("people-edit","layout"); clearSelection(); deselectTile(); renderAll(); }
   }
@@ -665,12 +665,11 @@
     $("search").addEventListener("input", function(e){ applySearch(e.target.value); });
     $("searchClear").addEventListener("click", function(){ $("search").value=""; applySearch(""); $("search").focus(); });
     document.querySelectorAll(".seg [data-view]").forEach(function(b){ b.addEventListener("click", function(){ setView(b.dataset.view); }); });
-    $("printBtn").addEventListener("click", function(){ window.print(); });
     $("moveCancel").addEventListener("click", clearSelection);
     $("modePeople").addEventListener("click", function(){ setMode("people"); });
     $("modeLayout").addEventListener("click", function(){ setMode("layout"); });
 
-    $("adminBtn").addEventListener("click", function(){ if(isAdmin){ setAdmin(false); return; } $("adminModal").classList.add("show"); $("adminErr").textContent=""; $("adminCode").value=""; setTimeout(function(){$("adminCode").focus();},50); });
+    $("adminLink").addEventListener("click", function(){ if(isAdmin){ setAdmin(false); return; } $("adminModal").classList.add("show"); $("adminErr").textContent=""; $("adminCode").value=""; setTimeout(function(){$("adminCode").focus();},50); });
     $("modalCancel").addEventListener("click", function(){ $("adminModal").classList.remove("show"); });
     $("adminModal").addEventListener("click", function(e){ if(e.target===$("adminModal")) $("adminModal").classList.remove("show"); });
     function tryUnlock(){ if($("adminCode").value===ADMIN_CODE){ $("adminModal").classList.remove("show"); setAdmin(true); toast("Editing unlocked"); } else { $("adminErr").textContent="That passcode didn't match. Try again or contact Operations."; } }

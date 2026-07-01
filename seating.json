@@ -1,7 +1,7 @@
 {
   "version": 4,
   "cell": 88,
-  "updatedAt": 1782798364758,
+  "updatedAt": 1782927801355,
   "zones": [
     {
       "id": "g-summit",
@@ -290,12 +290,7 @@
       "row": 8,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p14",
-          "name": "Maya"
-        }
-      ]
+      "people": []
     },
     {
       "id": "d41",
@@ -306,7 +301,12 @@
       "row": 9,
       "w": 1,
       "h": 1,
-      "people": []
+      "people": [
+        {
+          "id": "p71",
+          "name": "Annie H."
+        }
+      ]
     },
     {
       "id": "d75",

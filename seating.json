@@ -71,10 +71,6 @@
         {
           "id": "p1",
           "name": "Erin M."
-        },
-        {
-          "id": "p2",
-          "name": "Ryan B."
         }
       ]
     },
@@ -111,16 +107,16 @@
       "h": 1,
       "people": [
         {
+          "id": "p2",
+          "name": "Brian H."
+        },
+        {
           "id": "p3",
-          "name": "Joanna D."
+          "name": "Kathryn E."
         },
         {
           "id": "p4",
-          "name": "Leslie P."
-        },
-        {
-          "id": "p5",
-          "name": "Zionne F."
+          "name": "Megan N."
         }
       ]
     },
@@ -135,12 +131,16 @@
       "h": 1,
       "people": [
         {
+          "id": "p5",
+          "name": "Dylan S."
+        },
+        {
           "id": "p6",
-          "name": "Laura S."
+          "name": "Lauren K."
         },
         {
           "id": "p7",
-          "name": "Marian V."
+          "name": "Mark M."
         }
       ]
     },
@@ -156,11 +156,15 @@
       "people": [
         {
           "id": "p8",
-          "name": "Taylor J."
+          "name": "Ashley J."
         },
         {
           "id": "p9",
-          "name": "Marisa M."
+          "name": "Gabi R."
+        },
+        {
+          "id": "p10",
+          "name": "Allison C."
         }
       ]
     },
@@ -184,12 +188,8 @@
       "row": 7,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p68",
-          "name": "Clara H."
-        }
-      ]
+      "people": [],
+      "hoteling": true
     },
     {
       "id": "d52",
@@ -200,12 +200,8 @@
       "row": 8,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p73",
-          "name": "Ennie A."
-        }
-      ]
+      "people": [],
+      "hoteling": true
     },
     {
       "id": "d53",
@@ -216,12 +212,8 @@
       "row": 9,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p74",
-          "name": "Liz L."
-        }
-      ]
+      "people": [],
+      "hoteling": true
     },
     {
       "id": "d46",
@@ -234,8 +226,16 @@
       "h": 1,
       "people": [
         {
-          "id": "p10",
-          "name": "Tonya T."
+          "id": "p11",
+          "name": "Neome A."
+        },
+        {
+          "id": "p12",
+          "name": "Taylor J."
+        },
+        {
+          "id": "p13",
+          "name": "Alexa D."
         }
       ]
     },
@@ -250,8 +250,16 @@
       "h": 1,
       "people": [
         {
-          "id": "p11",
-          "name": "Ben W."
+          "id": "p14",
+          "name": "Liz T."
+        },
+        {
+          "id": "p15",
+          "name": "Marian V."
+        },
+        {
+          "id": "p16",
+          "name": "Jennifer M."
         }
       ]
     },
@@ -266,12 +274,16 @@
       "h": 1,
       "people": [
         {
-          "id": "p12",
-          "name": "Jennifer M."
+          "id": "p17",
+          "name": "Sameer T."
         },
         {
-          "id": "p13",
-          "name": "Susie P."
+          "id": "p18",
+          "name": "Marisa M."
+        },
+        {
+          "id": "p19",
+          "name": "Lucy B."
         }
       ]
     },
@@ -284,12 +296,8 @@
       "row": 7,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p67",
-          "name": "Summer A."
-        }
-      ]
+      "people": [],
+      "hoteling": true
     },
     {
       "id": "d42",
@@ -300,12 +308,8 @@
       "row": 8,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p72",
-          "name": "Sara Amiot"
-        }
-      ]
+      "people": [],
+      "hoteling": true
     },
     {
       "id": "d41",
@@ -316,12 +320,8 @@
       "row": 9,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p71",
-          "name": "Annie H."
-        }
-      ]
+      "people": [],
+      "hoteling": true
     },
     {
       "id": "d75",
@@ -334,7 +334,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p15",
+          "id": "p20",
           "name": "Suzie S."
         }
       ]
@@ -350,8 +350,8 @@
       "h": 1,
       "people": [
         {
-          "id": "p16",
-          "name": "Dan O."
+          "id": "p21",
+          "name": "Tonya T."
         }
       ]
     },
@@ -366,8 +366,8 @@
       "h": 1,
       "people": [
         {
-          "id": "p17",
-          "name": "Gabi R."
+          "id": "p22",
+          "name": "Ben W."
         }
       ]
     },
@@ -382,12 +382,12 @@
       "h": 1,
       "people": [
         {
-          "id": "p18",
-          "name": "Liz T."
+          "id": "p23",
+          "name": "Xiaojing L."
         },
         {
-          "id": "p19",
-          "name": "Hannah E."
+          "id": "p24",
+          "name": "Bryanna W."
         }
       ]
     },
@@ -402,7 +402,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p20",
+          "id": "p25",
           "name": "Alicia S."
         }
       ]
@@ -418,7 +418,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p21",
+          "id": "p26",
           "name": "Payton C."
         }
       ]
@@ -434,7 +434,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p22",
+          "id": "p27",
           "name": "Ben L."
         }
       ]
@@ -448,12 +448,7 @@
       "row": 8,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p23",
-          "name": "Brian H."
-        }
-      ]
+      "people": []
     },
     {
       "id": "d39",
@@ -466,7 +461,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p24",
+          "id": "p28",
           "name": "Ben H."
         }
       ]
@@ -482,7 +477,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p25",
+          "id": "p29",
           "name": "Gordon C."
         }
       ]
@@ -498,7 +493,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p26",
+          "id": "p30",
           "name": "Jeanine C."
         }
       ]
@@ -514,7 +509,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p27",
+          "id": "p31",
           "name": "Anne H."
         }
       ]
@@ -530,7 +525,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p28",
+          "id": "p32",
           "name": "Peter C."
         }
       ]
@@ -546,7 +541,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p29",
+          "id": "p33",
           "name": "Diego V."
         }
       ]
@@ -562,7 +557,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p30",
+          "id": "p34",
           "name": "Fiona M."
         }
       ]
@@ -578,7 +573,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p31",
+          "id": "p35",
           "name": "Rachel G."
         }
       ]
@@ -592,16 +587,7 @@
       "row": 8,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p32",
-          "name": "Spencer G."
-        },
-        {
-          "id": "p33",
-          "name": "Kathryn E."
-        }
-      ]
+      "people": []
     },
     {
       "id": "d24",
@@ -614,7 +600,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p34",
+          "id": "p36",
           "name": "Craig A."
         }
       ]
@@ -641,7 +627,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p35",
+          "id": "p37",
           "name": "Justin E."
         }
       ]
@@ -657,7 +643,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p36",
+          "id": "p38",
           "name": "Ashley W."
         }
       ]
@@ -673,12 +659,12 @@
       "h": 1,
       "people": [
         {
-          "id": "p37",
-          "name": "Val O."
+          "id": "p39",
+          "name": "Vickie R."
         },
         {
-          "id": "p38",
-          "name": "Lucy B."
+          "id": "p40",
+          "name": "Val O."
         }
       ]
     },
@@ -691,12 +677,7 @@
       "row": 4,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p39",
-          "name": "Matt P."
-        }
-      ]
+      "people": []
     },
     {
       "id": "d19",
@@ -707,12 +688,7 @@
       "row": 6,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p40",
-          "name": "Vickie R."
-        }
-      ]
+      "people": []
     },
     {
       "id": "d20",
@@ -730,7 +706,7 @@
         },
         {
           "id": "p42",
-          "name": "EkOngKar S."
+          "name": "Irina K."
         }
       ]
     },
@@ -743,12 +719,7 @@
       "row": 8,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p43",
-          "name": "Ezekiel S."
-        }
-      ]
+      "people": []
     },
     {
       "id": "d22",
@@ -759,12 +730,7 @@
       "row": 9,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p44",
-          "name": "Dylan S."
-        }
-      ]
+      "people": []
     },
     {
       "id": "d14",
@@ -777,16 +743,12 @@
       "h": 1,
       "people": [
         {
-          "id": "p45",
-          "name": "Alexa D."
+          "id": "p43",
+          "name": "Michael W."
         },
         {
-          "id": "p46",
-          "name": "Megan N."
-        },
-        {
-          "id": "p69",
-          "name": "Mark M."
+          "id": "p44",
+          "name": "Ezekiel S."
         }
       ]
     },
@@ -799,12 +761,7 @@
       "row": 2,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p47",
-          "name": "Sameer T."
-        }
-      ]
+      "people": []
     },
     {
       "id": "d12",
@@ -817,8 +774,8 @@
       "h": 1,
       "people": [
         {
-          "id": "p48",
-          "name": "Jennifer"
+          "id": "p45",
+          "name": "David S."
         }
       ]
     },
@@ -833,7 +790,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p50",
+          "id": "p46",
           "name": "Eric N."
         }
       ]
@@ -860,7 +817,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p51",
+          "id": "p47",
           "name": "Maria T."
         }
       ]
@@ -876,8 +833,8 @@
       "h": 1,
       "people": [
         {
-          "id": "p52",
-          "name": "Irina K."
+          "id": "p48",
+          "name": "Ryan B."
         }
       ]
     },
@@ -892,7 +849,7 @@
       "h": 1,
       "people": [
         {
-          "id": "p53",
+          "id": "p49",
           "name": "Jane M."
         }
       ]
@@ -985,8 +942,8 @@
       "h": 1,
       "people": [
         {
-          "id": "p54",
-          "name": "Lauren K."
+          "id": "p50",
+          "name": "Sara Amiot"
         }
       ]
     },
@@ -1001,8 +958,8 @@
       "h": 1,
       "people": [
         {
-          "id": "p55",
-          "name": "Michael W."
+          "id": "p51",
+          "name": "Annie H."
         }
       ]
     },
@@ -1015,12 +972,7 @@
       "row": 7,
       "w": 1,
       "h": 1,
-      "people": [
-        {
-          "id": "p56",
-          "name": "Neome A."
-        }
-      ]
+      "people": []
     },
     {
       "id": "d69",
@@ -1033,16 +985,12 @@
       "h": 1,
       "people": [
         {
-          "id": "p57",
+          "id": "p52",
+          "name": "Dan O."
+        },
+        {
+          "id": "p53",
           "name": "Marti T."
-        },
-        {
-          "id": "p58",
-          "name": "Paco M."
-        },
-        {
-          "id": "p59",
-          "name": "Miguel S."
         }
       ]
     },
@@ -1068,12 +1016,12 @@
       "h": 1,
       "people": [
         {
-          "id": "p61",
+          "id": "p54",
           "name": "Diane C."
         },
         {
-          "id": "p75",
-          "name": "Allison C."
+          "id": "p55",
+          "name": "Matt P."
         }
       ]
     },
@@ -1088,8 +1036,8 @@
       "h": 1,
       "people": [
         {
-          "id": "p62",
-          "name": "Torie R."
+          "id": "p56",
+          "name": "Lexi"
         }
       ]
     },
@@ -1104,8 +1052,8 @@
       "h": 1,
       "people": [
         {
-          "id": "p63",
-          "name": "Lindsay D."
+          "id": "p57",
+          "name": "Clara H."
         }
       ]
     },
@@ -1120,8 +1068,8 @@
       "h": 1,
       "people": [
         {
-          "id": "p70",
-          "name": "Ashley J."
+          "id": "p58",
+          "name": "Ennie A."
         }
       ]
     },
@@ -1136,8 +1084,8 @@
       "h": 1,
       "people": [
         {
-          "id": "p65",
-          "name": "Xiaojing L."
+          "id": "p59",
+          "name": "Liz L."
         }
       ]
     },
@@ -1152,8 +1100,8 @@
       "h": 1,
       "people": [
         {
-          "id": "p66",
-          "name": "Bryanna W."
+          "id": "p60",
+          "name": "Summer A."
         }
       ]
     },
@@ -1279,7 +1227,80 @@
       "people": []
     }
   ],
-  "unassigned": [],
+  "unassigned": [
+    {
+      "id": "p61",
+      "name": "Joanna D."
+    },
+    {
+      "id": "p62",
+      "name": "Leslie P."
+    },
+    {
+      "id": "p63",
+      "name": "Zionne F."
+    },
+    {
+      "id": "p64",
+      "name": "Laura S."
+    },
+    {
+      "id": "p65",
+      "name": "Susie P."
+    },
+    {
+      "id": "p66",
+      "name": "Paco M."
+    },
+    {
+      "id": "p67",
+      "name": "Torie R."
+    },
+    {
+      "id": "p68",
+      "name": "Lindsay D."
+    },
+    {
+      "id": "p69",
+      "name": "Hannah E."
+    },
+    {
+      "id": "p70",
+      "name": "Miguel S."
+    },
+    {
+      "id": "p71",
+      "name": "EkOngKar S."
+    },
+    {
+      "id": "p72",
+      "name": "Spencer G."
+    },
+    {
+      "id": "p73",
+      "name": "Daniel Montoya"
+    },
+    {
+      "id": "p74",
+      "name": "Jeffrey Torrey"
+    },
+    {
+      "id": "p75",
+      "name": "Kelly Young"
+    },
+    {
+      "id": "p76",
+      "name": "Patrick Marshall"
+    },
+    {
+      "id": "p77",
+      "name": "Richard Mortela"
+    },
+    {
+      "id": "p78",
+      "name": "Susan Torrey"
+    }
+  ],
   "fit": "grow",
   "aisles": {
     "ground": {

@@ -1,0 +1,1336 @@
+{
+  "version": 4,
+  "cell": 88,
+  "updatedAt": 1784847952642,
+  "zones": [
+    {
+      "id": "g-summit",
+      "type": "conference",
+      "name": "Summit",
+      "level": "ground",
+      "col": 1,
+      "row": 1,
+      "w": 1,
+      "h": 4,
+      "people": []
+    },
+    {
+      "id": "g-kitchen",
+      "type": "conference",
+      "name": "Kitchen",
+      "level": "ground",
+      "col": 1,
+      "row": 5,
+      "w": 1,
+      "h": 3,
+      "people": []
+    },
+    {
+      "id": "g-ridgeline",
+      "type": "conference",
+      "name": "Ridgeline",
+      "level": "ground",
+      "col": 1,
+      "row": 8,
+      "w": 1,
+      "h": 3,
+      "people": []
+    },
+    {
+      "id": "g-storage",
+      "type": "other",
+      "name": "Land Storage",
+      "level": "ground",
+      "col": 2,
+      "row": 1,
+      "w": 1,
+      "h": 4,
+      "people": []
+    },
+    {
+      "id": "g-bath",
+      "type": "other",
+      "name": "Restrooms",
+      "level": "ground",
+      "col": 2,
+      "row": 6,
+      "w": 2,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "d57",
+      "type": "desk",
+      "name": "57",
+      "level": "ground",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p1",
+          "name": "Erin M."
+        }
+      ]
+    },
+    {
+      "id": "g-well",
+      "type": "conference",
+      "name": "Well",
+      "level": "ground",
+      "col": 3,
+      "row": 3,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "g-nest",
+      "type": "conference",
+      "name": "Nest",
+      "level": "ground",
+      "col": 3,
+      "row": 4,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "d47",
+      "type": "desk",
+      "name": "47",
+      "level": "ground",
+      "col": 4,
+      "row": 1,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p81",
+          "name": "Dylan S."
+        }
+      ]
+    },
+    {
+      "id": "d49",
+      "type": "desk",
+      "name": "49",
+      "level": "ground",
+      "col": 4,
+      "row": 2,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p4",
+          "name": "Megan N."
+        },
+        {
+          "id": "p5",
+          "name": "Marian V."
+        }
+      ]
+    },
+    {
+      "id": "d50",
+      "type": "desk",
+      "name": "50",
+      "level": "ground",
+      "col": 4,
+      "row": 3,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p6",
+          "name": "Taylor J."
+        },
+        {
+          "id": "p7",
+          "name": "Annie H."
+        }
+      ]
+    },
+    {
+      "id": "g-openwork",
+      "type": "conference",
+      "name": "The Cube",
+      "level": "ground",
+      "col": 4,
+      "row": 6,
+      "w": 2,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "d51",
+      "type": "desk",
+      "name": "51",
+      "level": "ground",
+      "col": 4,
+      "row": 7,
+      "w": 1,
+      "h": 1,
+      "people": [],
+      "hoteling": true
+    },
+    {
+      "id": "d52",
+      "type": "desk",
+      "name": "52",
+      "level": "ground",
+      "col": 4,
+      "row": 8,
+      "w": 1,
+      "h": 1,
+      "people": [],
+      "hoteling": true
+    },
+    {
+      "id": "d53",
+      "type": "desk",
+      "name": "53",
+      "level": "ground",
+      "col": 4,
+      "row": 9,
+      "w": 1,
+      "h": 1,
+      "people": [],
+      "hoteling": true
+    },
+    {
+      "id": "d46",
+      "type": "desk",
+      "name": "46",
+      "level": "ground",
+      "col": 5,
+      "row": 1,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p8",
+          "name": "Alexa D."
+        },
+        {
+          "id": "p9",
+          "name": "Ennie A."
+        }
+      ]
+    },
+    {
+      "id": "d45",
+      "type": "desk",
+      "name": "45",
+      "level": "ground",
+      "col": 5,
+      "row": 2,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p10",
+          "name": "Mark M."
+        },
+        {
+          "id": "p11",
+          "name": "Sameer T."
+        }
+      ]
+    },
+    {
+      "id": "d44",
+      "type": "desk",
+      "name": "44",
+      "level": "ground",
+      "col": 5,
+      "row": 3,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p12",
+          "name": "Gabi R."
+        },
+        {
+          "id": "p13",
+          "name": "Jennifer M."
+        }
+      ]
+    },
+    {
+      "id": "d43",
+      "type": "desk",
+      "name": "43",
+      "level": "ground",
+      "col": 5,
+      "row": 7,
+      "w": 1,
+      "h": 1,
+      "people": [],
+      "hoteling": true
+    },
+    {
+      "id": "d42",
+      "type": "desk",
+      "name": "42",
+      "level": "ground",
+      "col": 5,
+      "row": 8,
+      "w": 1,
+      "h": 1,
+      "people": [],
+      "hoteling": true
+    },
+    {
+      "id": "d41",
+      "type": "desk",
+      "name": "41",
+      "level": "ground",
+      "col": 5,
+      "row": 9,
+      "w": 1,
+      "h": 1,
+      "people": [],
+      "hoteling": true
+    },
+    {
+      "id": "d75",
+      "type": "desk",
+      "name": "75",
+      "level": "ground",
+      "col": 4,
+      "row": 10,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p14",
+          "name": "Suzie S."
+        }
+      ]
+    },
+    {
+      "id": "d32",
+      "type": "desk",
+      "name": "32",
+      "level": "ground",
+      "col": 6,
+      "row": 1,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p15",
+          "name": "Dan O."
+        }
+      ]
+    },
+    {
+      "id": "d33",
+      "type": "desk",
+      "name": "33",
+      "level": "ground",
+      "col": 6,
+      "row": 2,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p16",
+          "name": "Ben W."
+        }
+      ]
+    },
+    {
+      "id": "d34",
+      "type": "desk",
+      "name": "34",
+      "level": "ground",
+      "col": 6,
+      "row": 3,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p17",
+          "name": "Marisa M."
+        },
+        {
+          "id": "p18",
+          "name": "Allison C."
+        }
+      ]
+    },
+    {
+      "id": "d35",
+      "type": "desk",
+      "name": "35",
+      "level": "ground",
+      "col": 6,
+      "row": 4,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p19",
+          "name": "Alicia S."
+        }
+      ]
+    },
+    {
+      "id": "d36",
+      "type": "desk",
+      "name": "36",
+      "level": "ground",
+      "col": 6,
+      "row": 6,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p20",
+          "name": "Payton C."
+        }
+      ]
+    },
+    {
+      "id": "d37",
+      "type": "desk",
+      "name": "37",
+      "level": "ground",
+      "col": 6,
+      "row": 7,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p21",
+          "name": "Ben L."
+        }
+      ]
+    },
+    {
+      "id": "d38",
+      "type": "desk",
+      "name": "38",
+      "level": "ground",
+      "col": 6,
+      "row": 8,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p22",
+          "name": "Brian H."
+        }
+      ]
+    },
+    {
+      "id": "d39",
+      "type": "desk",
+      "name": "39",
+      "level": "ground",
+      "col": 6,
+      "row": 9,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p23",
+          "name": "Ben H."
+        }
+      ]
+    },
+    {
+      "id": "d74",
+      "type": "desk",
+      "name": "74",
+      "level": "ground",
+      "col": 5,
+      "row": 10,
+      "w": 2,
+      "h": 1,
+      "people": [
+        {
+          "id": "p24",
+          "name": "Gordon C."
+        }
+      ]
+    },
+    {
+      "id": "d31",
+      "type": "desk",
+      "name": "31",
+      "level": "ground",
+      "col": 7,
+      "row": 1,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p25",
+          "name": "Jeanine C."
+        }
+      ]
+    },
+    {
+      "id": "d30",
+      "type": "desk",
+      "name": "30",
+      "level": "ground",
+      "col": 7,
+      "row": 2,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p26",
+          "name": "Anne H."
+        }
+      ]
+    },
+    {
+      "id": "d29",
+      "type": "desk",
+      "name": "29",
+      "level": "ground",
+      "col": 7,
+      "row": 3,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p27",
+          "name": "Peter C."
+        }
+      ]
+    },
+    {
+      "id": "d28",
+      "type": "desk",
+      "name": "28",
+      "level": "ground",
+      "col": 7,
+      "row": 4,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p28",
+          "name": "Diego V."
+        }
+      ]
+    },
+    {
+      "id": "d27",
+      "type": "desk",
+      "name": "27",
+      "level": "ground",
+      "col": 7,
+      "row": 6,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p29",
+          "name": "Fiona M."
+        }
+      ]
+    },
+    {
+      "id": "d26",
+      "type": "desk",
+      "name": "26",
+      "level": "ground",
+      "col": 7,
+      "row": 7,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p30",
+          "name": "Rachel G."
+        }
+      ]
+    },
+    {
+      "id": "d25",
+      "type": "desk",
+      "name": "25",
+      "level": "ground",
+      "col": 7,
+      "row": 8,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p31",
+          "name": "Val O."
+        }
+      ]
+    },
+    {
+      "id": "d24",
+      "type": "desk",
+      "name": "24",
+      "level": "ground",
+      "col": 7,
+      "row": 9,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p32",
+          "name": "Craig A."
+        }
+      ]
+    },
+    {
+      "id": "g-elec",
+      "type": "other",
+      "name": "Electrical Room",
+      "level": "ground",
+      "col": 7,
+      "row": 10,
+      "w": 2,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "d15",
+      "type": "desk",
+      "name": "15",
+      "level": "ground",
+      "col": 8,
+      "row": 1,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p33",
+          "name": "Justin E."
+        }
+      ]
+    },
+    {
+      "id": "d16",
+      "type": "desk",
+      "name": "16",
+      "level": "ground",
+      "col": 8,
+      "row": 2,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p34",
+          "name": "Ashley W."
+        }
+      ]
+    },
+    {
+      "id": "d17",
+      "type": "desk",
+      "name": "17",
+      "level": "ground",
+      "col": 8,
+      "row": 3,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p35",
+          "name": "Summer A."
+        }
+      ]
+    },
+    {
+      "id": "d18",
+      "type": "desk",
+      "name": "18",
+      "level": "ground",
+      "col": 8,
+      "row": 4,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p36",
+          "name": "Lexi"
+        }
+      ]
+    },
+    {
+      "id": "d19",
+      "type": "desk",
+      "name": "19",
+      "level": "ground",
+      "col": 8,
+      "row": 6,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p37",
+          "name": "Vickie R."
+        }
+      ]
+    },
+    {
+      "id": "d20",
+      "type": "desk",
+      "name": "20",
+      "level": "ground",
+      "col": 8,
+      "row": 7,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p38",
+          "name": "Rosie W."
+        }
+      ]
+    },
+    {
+      "id": "d21",
+      "type": "desk",
+      "name": "21",
+      "level": "ground",
+      "col": 8,
+      "row": 8,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p39",
+          "name": "Ezekiel S."
+        }
+      ]
+    },
+    {
+      "id": "d22",
+      "type": "desk",
+      "name": "22",
+      "level": "ground",
+      "col": 8,
+      "row": 9,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p40",
+          "name": "Ryan B."
+        }
+      ]
+    },
+    {
+      "id": "d14",
+      "type": "desk",
+      "name": "14",
+      "level": "ground",
+      "col": 9,
+      "row": 1,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p41",
+          "name": "Lucy B."
+        },
+        {
+          "id": "p42",
+          "name": "Leslie P."
+        }
+      ]
+    },
+    {
+      "id": "d13",
+      "type": "desk",
+      "name": "13",
+      "level": "ground",
+      "col": 9,
+      "row": 2,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p43",
+          "name": "Tonya T."
+        }
+      ]
+    },
+    {
+      "id": "d12",
+      "type": "desk",
+      "name": "12",
+      "level": "ground",
+      "col": 9,
+      "row": 3,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p44",
+          "name": "Liz T."
+        }
+      ]
+    },
+    {
+      "id": "d11",
+      "type": "desk",
+      "name": "11",
+      "level": "ground",
+      "col": 9,
+      "row": 4,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p45",
+          "name": "Eric N."
+        }
+      ]
+    },
+    {
+      "id": "g-printer",
+      "type": "other",
+      "name": "Letter Printer",
+      "level": "ground",
+      "col": 9,
+      "row": 6,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "d9",
+      "type": "desk",
+      "name": "9",
+      "level": "ground",
+      "col": 9,
+      "row": 7,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p46",
+          "name": "Maria T."
+        }
+      ]
+    },
+    {
+      "id": "d8",
+      "type": "desk",
+      "name": "8",
+      "level": "ground",
+      "col": 9,
+      "row": 8,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p47",
+          "name": "Irina K."
+        }
+      ]
+    },
+    {
+      "id": "d7",
+      "type": "desk",
+      "name": "7",
+      "level": "ground",
+      "col": 9,
+      "row": 9,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p48",
+          "name": "Jane M."
+        }
+      ]
+    },
+    {
+      "id": "m-event",
+      "type": "other",
+      "name": "Event",
+      "level": "ground",
+      "col": 10,
+      "row": 1,
+      "w": 1,
+      "h": 3,
+      "people": []
+    },
+    {
+      "id": "m-barn",
+      "type": "conference",
+      "name": "Barn",
+      "level": "ground",
+      "col": 10,
+      "row": 4,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "m-light",
+      "type": "conference",
+      "name": "Lighthouse",
+      "level": "ground",
+      "col": 10,
+      "row": 5,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "m-shed",
+      "type": "conference",
+      "name": "Shed",
+      "level": "ground",
+      "col": 10,
+      "row": 6,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "d5",
+      "type": "conference",
+      "name": "Open Space",
+      "level": "ground",
+      "col": 10,
+      "row": 9,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "m-supply",
+      "type": "other",
+      "name": "Printer Main & Tabloid Office Supplies",
+      "level": "ground",
+      "col": 10,
+      "row": 7,
+      "w": 1,
+      "h": 2,
+      "people": []
+    },
+    {
+      "id": "m-stairs",
+      "type": "other",
+      "name": "Stairs",
+      "level": "mezz",
+      "col": 2,
+      "row": 2,
+      "w": 2,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "d66",
+      "type": "desk",
+      "name": "66",
+      "level": "mezz",
+      "col": 1,
+      "row": 5,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p49",
+          "name": "Kathryn E."
+        }
+      ]
+    },
+    {
+      "id": "d67",
+      "type": "desk",
+      "name": "67",
+      "level": "mezz",
+      "col": 1,
+      "row": 6,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p50",
+          "name": "Michael W."
+        }
+      ]
+    },
+    {
+      "id": "d68",
+      "type": "desk",
+      "name": "68",
+      "level": "mezz",
+      "col": 1,
+      "row": 7,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p51",
+          "name": "Neome A."
+        }
+      ]
+    },
+    {
+      "id": "d69",
+      "type": "desk",
+      "name": "69",
+      "level": "mezz",
+      "col": 1,
+      "row": 8,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p79",
+          "name": "Lauren K."
+        }
+      ]
+    },
+    {
+      "id": "m-openwork",
+      "type": "conference",
+      "name": "Open Work Area",
+      "level": "mezz",
+      "col": 1,
+      "row": 9,
+      "w": 2,
+      "h": 2,
+      "people": []
+    },
+    {
+      "id": "d59",
+      "type": "desk",
+      "name": "59",
+      "level": "mezz",
+      "col": 3,
+      "row": 3,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p53",
+          "name": "Diane C."
+        }
+      ]
+    },
+    {
+      "id": "d60",
+      "type": "desk",
+      "name": "60",
+      "level": "mezz",
+      "col": 3,
+      "row": 4,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p54",
+          "name": "Matt P."
+        }
+      ]
+    },
+    {
+      "id": "d61",
+      "type": "desk",
+      "name": "61",
+      "level": "mezz",
+      "col": 3,
+      "row": 5,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p82",
+          "name": "Lindsay D."
+        },
+        {
+          "id": "p83",
+          "name": "Torie R."
+        }
+      ]
+    },
+    {
+      "id": "d63",
+      "type": "desk",
+      "name": "63",
+      "level": "mezz",
+      "col": 3,
+      "row": 6,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p56",
+          "name": "Ashley J."
+        }
+      ]
+    },
+    {
+      "id": "d64",
+      "type": "desk",
+      "name": "64",
+      "level": "mezz",
+      "col": 3,
+      "row": 7,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p57",
+          "name": "Xiaojing L."
+        }
+      ]
+    },
+    {
+      "id": "d65",
+      "type": "desk",
+      "name": "65",
+      "level": "mezz",
+      "col": 3,
+      "row": 8,
+      "w": 1,
+      "h": 1,
+      "people": [
+        {
+          "id": "p58",
+          "name": "Bryanna W."
+        }
+      ]
+    },
+    {
+      "id": "zmqzsezck",
+      "type": "other",
+      "name": "Development",
+      "level": "ground",
+      "col": 10,
+      "row": 10,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "zmqzsfn7l",
+      "type": "other",
+      "name": "Stairs",
+      "level": "ground",
+      "col": 3,
+      "row": 2,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "zmqzsgflo",
+      "type": "conference",
+      "name": "Phone Booth",
+      "level": "mezz",
+      "col": 3,
+      "row": 9,
+      "w": 1,
+      "h": 2,
+      "people": []
+    },
+    {
+      "id": "zmqzsiwpv",
+      "type": "other",
+      "name": "Swag",
+      "level": "mezz",
+      "col": 2,
+      "row": 1,
+      "w": 2,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "zmqzsjye1",
+      "type": "other",
+      "name": "Water",
+      "level": "mezz",
+      "col": 1,
+      "row": 4,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "zmr06bwcf",
+      "type": "other",
+      "name": "Marketing & Printer",
+      "level": "mezz",
+      "col": 1,
+      "row": 3,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "zmr071meg",
+      "type": "other",
+      "name": "Finance & Bulk Scanner",
+      "level": "mezz",
+      "col": 2,
+      "row": 3,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "zmr07lwb4",
+      "type": "other",
+      "name": " ",
+      "level": "ground",
+      "col": 2,
+      "row": 7,
+      "w": 2,
+      "h": 2,
+      "people": []
+    },
+    {
+      "id": "zmr07mszh",
+      "type": "conference",
+      "name": "Booth",
+      "level": "ground",
+      "col": 2,
+      "row": 9,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "zmr07mxh2",
+      "type": "other",
+      "name": "Guest Arrival",
+      "level": "ground",
+      "col": 3,
+      "row": 9,
+      "w": 1,
+      "h": 1,
+      "people": []
+    },
+    {
+      "id": "zmr083wke",
+      "type": "other",
+      "name": "Cleaning Supplies",
+      "level": "ground",
+      "col": 9,
+      "row": 10,
+      "w": 1,
+      "h": 1,
+      "people": []
+    }
+  ],
+  "unassigned": [
+    {
+      "id": "p59",
+      "name": "Clara H."
+    },
+    {
+      "id": "p60",
+      "name": "Liz L."
+    },
+    {
+      "id": "p61",
+      "name": "Spencer G."
+    },
+    {
+      "id": "p62",
+      "name": "EkOngKar S."
+    },
+    {
+      "id": "p63",
+      "name": "Miguel S."
+    },
+    {
+      "id": "p64",
+      "name": "Hannah E."
+    },
+    {
+      "id": "p67",
+      "name": "Paco M."
+    },
+    {
+      "id": "p68",
+      "name": "Susie P."
+    },
+    {
+      "id": "p69",
+      "name": "Zionne F."
+    },
+    {
+      "id": "p70",
+      "name": "Joanna D."
+    },
+    {
+      "id": "p71",
+      "name": "Laura S."
+    },
+    {
+      "id": "p72",
+      "name": "Daniel Montoya"
+    },
+    {
+      "id": "p73",
+      "name": "Jeffrey Torrey"
+    },
+    {
+      "id": "p74",
+      "name": "Kelly Young"
+    },
+    {
+      "id": "p75",
+      "name": "Patrick Marshall"
+    },
+    {
+      "id": "p76",
+      "name": "Richard Mortela"
+    },
+    {
+      "id": "p77",
+      "name": "Susan Torrey"
+    },
+    {
+      "id": "p80",
+      "name": "Marti T."
+    },
+    {
+      "id": "p84",
+      "name": "Sara Amiot"
+    }
+  ],
+  "fit": "grow",
+  "aisles": {
+    "ground": {
+      "x": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "y": [
+        9
+      ]
+    },
+    "mezz": {
+      "x": [
+        1
+      ],
+      "y": [
+        3
+      ]
+    }
+  },
+  "aisleSize": 20,
+  "paths": {
+    "ground": [],
+    "mezz": []
+  }
+}

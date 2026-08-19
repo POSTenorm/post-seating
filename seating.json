@@ -1,7 +1,7 @@
 {
   "version": 4,
   "cell": 88,
-  "updatedAt": 1784847952642,
+  "updatedAt": 1787165557009,
   "zones": [
     {
       "id": "g-summit",
@@ -302,8 +302,8 @@
       "h": 1,
       "people": [
         {
-          "id": "p72",
-          "name": "Sara Amiot"
+          "id": "p76",
+          "name": "Lexi M."
         }
       ]
     },
@@ -1019,6 +1019,10 @@
         {
           "id": "p56",
           "name": "Neome A."
+        },
+        {
+          "id": "p72",
+          "name": "Sara Amiot"
         }
       ]
     },

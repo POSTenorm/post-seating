@@ -1,7 +1,7 @@
 {
- "version": 7,
+ "version": 10,
  "cell": 88,
- "updatedAt": 1790118358720,
+ "updatedAt": 1790119367402,
  "zones": [
   {
    "id": "g-summit",
@@ -320,8 +320,8 @@
      "name": "Dan O."
     },
     {
-     "id": "p2",
-     "name": "Ryan B."
+     "id": "p39",
+     "name": "Matt P."
     }
    ]
   },
@@ -340,8 +340,8 @@
      "name": "Gabi R."
     },
     {
-     "id": "p47",
-     "name": "Sameer T."
+     "id": "p2",
+     "name": "Ryan B."
     }
    ]
   },
@@ -378,6 +378,10 @@
     {
      "id": "p20",
      "name": "Alicia S."
+    },
+    {
+     "id": "p73",
+     "name": "Ennie A."
     }
    ]
   },
@@ -675,10 +679,6 @@
    "h": 1,
    "people": [
     {
-     "id": "p39",
-     "name": "Matt P."
-    },
-    {
      "id": "p76",
      "name": "Lexi M."
     }
@@ -810,10 +810,6 @@
    "w": 1,
    "h": 1,
    "people": [
-    {
-     "id": "p73",
-     "name": "Ennie A."
-    },
     {
      "id": "p71",
      "name": "Annie H."
@@ -1017,10 +1013,6 @@
     {
      "id": "p56",
      "name": "Neome A."
-    },
-    {
-     "id": "p72",
-     "name": "Sara Amiot"
     }
    ]
   },
@@ -1082,8 +1074,12 @@
    "h": 1,
    "people": [
     {
-     "id": "p57",
-     "name": "Marti T."
+     "id": "p62",
+     "name": "Torie R."
+    },
+    {
+     "id": "p63",
+     "name": "Lindsay D."
     }
    ]
   },
@@ -1098,12 +1094,8 @@
    "h": 1,
    "people": [
     {
-     "id": "p63",
-     "name": "Lindsay D."
-    },
-    {
-     "id": "p62",
-     "name": "Torie R."
+     "id": "p72",
+     "name": "Sara Amiot"
     }
    ]
   },
@@ -1136,6 +1128,10 @@
     {
      "id": "p65",
      "name": "Xiaojing L."
+    },
+    {
+     "id": "p47",
+     "name": "Sameer T."
     }
    ]
   },
@@ -1277,7 +1273,12 @@
    "people": []
   }
  ],
- "unassigned": [],
+ "unassigned": [
+  {
+   "id": "p57",
+   "name": "Marti T."
+  }
+ ],
  "fit": "grow",
  "aisles": {
   "ground": {

@@ -1,7 +1,7 @@
 {
   "version": 4,
   "cell": 88,
-  "updatedAt": 1791930098204,
+  "updatedAt": 1792003671780,
   "zones": [
     {
       "id": "g-summit",
@@ -141,6 +141,10 @@
         {
           "id": "p7",
           "name": "Marian V."
+        },
+        {
+          "id": "p77",
+          "name": "Marshall P."
         }
       ]
     },
@@ -1021,8 +1025,8 @@
           "name": "Neome A."
         },
         {
-          "id": "p72",
-          "name": "Sara Amiot"
+          "id": "p78",
+          "name": "Sara A."
         }
       ]
     },
@@ -1283,12 +1287,7 @@
       "people": []
     }
   ],
-  "unassigned": [
-    {
-      "id": "p77",
-      "name": "Marshall P."
-    }
-  ],
+  "unassigned": [],
   "fit": "grow",
   "aisles": {
     "ground": {
